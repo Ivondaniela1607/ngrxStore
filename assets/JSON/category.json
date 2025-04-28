@@ -1,0 +1,19 @@
+[
+  {
+    "id_category": 1,
+    "name_category": "Naturaleza y aventura"
+  },
+  {
+    "id_category": 2,
+    "name_category": "Historia y cultura"
+  },
+  {
+    "id_category": 3,
+    "name_category": "Entretenimiento"
+  },
+  {
+    "id_category": 4,
+    "name_category": "Gastronomía y experiencias"
+  }
+  
+]

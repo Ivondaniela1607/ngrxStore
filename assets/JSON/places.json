@@ -1,0 +1,162 @@
+[
+  {
+    "id_place": 1,
+    "name_place": "Parque El Resurgimiento",
+    "description_place": "Un parque emblemático de Yopal ideal para caminatas y contacto con la naturaleza.",
+    "id_category": 1,
+    "id_city": 1,
+    "image": "/assets/images/places/parqueelresurgimiento.jpg"
+  },
+  {
+    "id_place": 2,
+    "name_place": "Museo Nacional de Colombia",
+    "description_place": "El museo más antiguo del país, ubicado en el centro de Bogotá.",
+    "id_category": 2,
+    "id_city": 2,
+    "image": "/assets/images/places/museonacionaldecolombia.jpg"
+  },
+  {
+    "id_place": 3,
+    "name_place": "Parque Explora",
+    "description_place": "Centro interactivo de ciencia y tecnología con acuarios y actividades divertidas en Medellín.",
+    "id_category": 3,
+    "id_city": 3,
+    "image": "/assets/images/places/parqueexplora.jpg"
+  },
+  {
+    "id_place": 4,
+    "name_place": "Bulevar del Río",
+    "description_place": "Zona peatonal de Cali con cafés y arte urbano junto al río Cali.",
+    "id_category": 4,
+    "id_city": 4,
+    "image": "/assets/images/places/bulevardelrio.jpg"
+  },
+  {
+    "id_place": 5,
+    "name_place": "Gran Malecón del Río",
+    "description_place": "Espacio de naturaleza y recreación a orillas del río Magdalena en Barranquilla.",
+    "id_category": 1,
+    "id_city": 5,
+    "image": "/assets/images/places/granmalecondelrio.jpg"
+  },
+  {
+    "id_place": 6,
+    "name_place": "Castillo de San Felipe de Barajas",
+    "description_place": "Una de las fortalezas más importantes construidas en América por los españoles, ubicada en Cartagena.",
+    "id_category": 2,
+    "id_city": 6,
+    "image": "/assets/images/places/castillodesanfelipedebarajas.jpg"
+  },
+  {
+    "id_place": 7,
+    "name_place": "Parque del Agua",
+    "description_place": "Un parque de luces, fuentes y naturaleza en Bucaramanga, perfecto para toda la familia.",
+    "id_category": 3,
+    "id_city": 7,
+    "image": "/assets/images/places/parquedelagua.jpg"
+  },
+  {
+    "id_place": 8,
+    "name_place": "Plaza de Bolívar",
+    "description_place": "La plaza principal de Pereira, rodeada de arquitectura colonial y moderna.",
+    "id_category": 2,
+    "id_city": 8,
+    "image": "/assets/images/places/plazadebolivar.jpg"
+  },
+  {
+    "id_place": 9,
+    "name_place": "Nevado del Ruiz",
+    "description_place": "Imponente volcán activo cerca de Manizales, ideal para excursiones de naturaleza.",
+    "id_category": 1,
+    "id_city": 9,
+    "image": "/assets/images/places/nevadodelruiz.jpg"
+  },
+  {
+    "id_place": 10,
+    "name_place": "Malecón de Cúcuta",
+    "description_place": "Espacio ideal para caminar y disfrutar la cultura local en Cúcuta.",
+    "id_category": 4,
+    "id_city": 10,
+    "image": "/assets/images/places/malecondecucuta.jpg"
+  },
+  {
+    "id_place": 11,
+    "name_place": "Parque de los Novios",
+    "description_place": "Zona de restaurantes, bares y vida nocturna en el corazón de Santa Marta.",
+    "id_category": 4,
+    "id_city": 11,
+    "image": "/assets/images/places/parquedelosnovios.jpg"
+  },
+  {
+    "id_place": 12,
+    "name_place": "Catedral Primada de Ibagué",
+    "description_place": "Imponente iglesia en la capital musical de Colombia.",
+    "id_category": 2,
+    "id_city": 12,
+    "image": "/assets/images/places/catedralprimadadeibague.jpg"
+  },
+  {
+    "id_place": 13,
+    "name_place": "Bioparque Los Ocarros",
+    "description_place": "Un parque de conservación de fauna y flora en Villavicencio.",
+    "id_category": 1,
+    "id_city": 13,
+    "image": "/assets/images/places/bioparquelosocarros.jpg"
+  },
+  {
+    "id_place": 14,
+    "name_place": "Malecón del Río Magdalena",
+    "description_place": "Hermoso paseo peatonal en Neiva con gastronomía local.",
+    "id_category": 4,
+    "id_city": 14,
+    "image": "/assets/images/places/malecondelriomagdalena.jpg"
+  },
+  {
+    "id_place": 15,
+    "name_place": "Laguna de la Cocha",
+    "description_place": "Un paisaje natural impresionante a pocos minutos de Pasto.",
+    "id_category": 1,
+    "id_city": 15,
+    "image": "/assets/images/places/lagunadelacocha.jpg"
+  },
+  {
+    "id_place": 16,
+    "name_place": "Plaza Cultural del Sinú",
+    "description_place": "Centro de arte y cultura en Montería, con acceso al río Sinú.",
+    "id_category": 2,
+    "id_city": 16,
+    "image": "/assets/images/places/plazaculturaldelsinu.jpg"
+  },
+  {
+    "id_place": 17,
+    "name_place": "Parque Santander",
+    "description_place": "Centro histórico y comercial en Sincelejo, rodeado de vida local.",
+    "id_category": 3,
+    "id_city": 17,
+    "image": "/assets/images/places/parquesantander.jpg"
+  },
+  {
+    "id_place": 18,
+    "name_place": "Puente del Humilladero",
+    "description_place": "Histórico puente colonial en Popayán, símbolo de la ciudad blanca.",
+    "id_category": 2,
+    "id_city": 18,
+    "image": "/assets/images/places/puentedelhumilladero.jpg"
+  },
+  {
+    "id_place": 19,
+    "name_place": "Malecón de Quibdó",
+    "description_place": "Bello malecón sobre el río Atrato, ideal para atardeceres en Quibdó.",
+    "id_category": 1,
+    "id_city": 19,
+    "image": "/assets/images/places/malecondequibdo.jpg"
+  },
+  {
+    "id_place": 20,
+    "name_place": "Parque de la Vida",
+    "description_place": "Un pulmón verde en Armenia, perfecto para caminatas y picnic.",
+    "id_category": 1,
+    "id_city": 20,
+    "image": "/assets/images/places/parquedelavida.jpg"
+  }
+]
