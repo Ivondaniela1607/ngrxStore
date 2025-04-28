@@ -11,15 +11,15 @@ export class PlacesService {
   readonly http = inject(HttpClient);
 
   getCategories():Observable<Category[]> {
-    return this.http.get<Category[]>('assets/JSON/category.json');
+    return this.http.get<Category[]>('/assets/JSON/category.json');
   }
     
   getCities():Observable<City[]> {    
-    return this.http.get<City[]>('assets/JSON/cities.json');
+    return this.http.get<City[]>('/assets/JSON/cities.json');
   }
 
   getPlaces():Observable<Place[]> {
-    return this.http.get<Place[]>('assets/JSON/places.json');
+    return this.http.get<Place[]>('/assets/JSON/places.json');
   }
 
   savePlace() {
