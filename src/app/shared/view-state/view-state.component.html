@@ -1,0 +1,33 @@
+<div class="fixed top-0 left-0 md:right-0 lg:right-0 m-4 p-2 bg-white/80 backdrop-blur-lg border border-gray-300 rounded-xl shadow-2xl z-50 w-48 md:w-64 lg:w-64 text-gray-900">
+  <button (click)="toggleExpand()" class="w-full flex items-center justify-between animate-bounce-slow">
+    <h3 class="text-xl text-center font-bold bg-gradient-to-r from-fuchsia-400 via-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+      Signals State
+    </h3>
+    <svg 
+    [ngClass]="{'rotate-180': expanded}" 
+    class="h-6 w-6 text-fuchsia-400 transition-transform duration-300" 
+    fill="none" 
+    stroke="currentColor" 
+    viewBox="0 0 24 24" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+  </svg>
+  </button>
+
+  <div 
+    class="overflow-hidden transition-all duration-500 ease-in-out"
+    [style.maxHeight]="expanded ? '500px' : '0px'">
+    <p class="text-sm text-gray-600 hidden md:block lg:block mt-2">
+      NgRx Signals provides a reactive state management solution for Angular.
+    </p>
+    <div class="flex flex-wrap gap-x-4 text-sm mt-2">
+      <p><span class="text-indigo-600">Filter:</span> {{ placeStore.stateSnapshot().filterName | titlecase }}</p>
+      <p><span class="text-indigo-600">Places:</span> {{ placeStore.stateSnapshot().places.length }}</p>
+      <p><span class="text-indigo-600">Cities:</span> {{ placeStore.stateSnapshot().cities.length }}</p>
+      <p><span class="text-indigo-600">Categories:</span> {{ placeStore.stateSnapshot().categories.length }}</p>
+      <p><span class="text-indigo-600">SearchTerm:</span> {{ placeStore.stateSnapshot().searchTerm }}</p>
+    </div>
+
+  </div>
+</div>

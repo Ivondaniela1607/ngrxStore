@@ -1,0 +1,47 @@
+<app-opc-filters></app-opc-filters>
+<div class="max-h-96 overflow-auto">
+  @if(placeStore.loading()) {
+    @for (i of [1, 2, 3, 4]; track i) {
+      <div class="grid grid-cols-12 w-full gap-2 border-b border-gray-700 py-3 pr-4 animate-pulse">
+        <div class="col-span-10 flex items-center gap-4">
+          <div class="w-16 h-16 lg:w-20 lg:h-20 md:w-20 md:h-20 rounded-md bg-gray-700"></div>
+          <div class="flex flex-col gap-2 w-full">
+            <div class="h-4 bg-gray-700 rounded w-3/4"></div>
+            <div class="h-3 bg-gray-700 rounded w-full"></div>
+            <div class="h-3 bg-gray-700 rounded w-5/6"></div>
+          </div>
+        </div>
+        <div class="col-span-1 flex justify-center items-center">
+          <div class="w-6 h-6 bg-gray-700 rounded-full"></div>
+        </div>
+        <div class="col-span-1 flex justify-center items-center">
+          <div class="w-6 h-6 bg-gray-700 rounded-full"></div>
+        </div>
+      </div>
+    }
+  } @else {
+    @for (item of placeStore.filteredPlace(); track $index) {
+      <div class="grid grid-cols-12 w-full gap-2 border-b border-gray-700 py-3 pr-4">
+        <div class="col-span-10 flex items-center gap-4">
+          <img src="{{ item.image }}" alt="{{ item.name_place }}" class="w-16 h-16 lg:w-20 lg:h-20 md:w-20 md:h-20 rounded-md object-cover" />
+          <div>
+            <h3 class="text-base md:text-lg lg:text-lg font-semibold text-white text-start">{{ item.name_place }}</h3>
+            <p class="text-sm text-gray-400 text-start line-clamp-2">{{ item.description_place }}</p>
+          </div>
+        </div>
+        <button (click)="editPlace(item)" matTooltip="Eliminar lugar"
+          class="col-span-1">
+          <span class="material-icons text-green-500 hover:text-green-600 duration-300"> edit </span>
+        </button>
+        <button (click)="deletePlace(item)" matTooltip="Eliminar lugar"
+          class="col-span-1">
+          <span class="material-icons text-red-500 hover:text-red-400 duration-300"> delete </span>
+        </button>
+      </div>
+    }@empty {
+      <div class="flex items-center justify-center w-full h-32">
+        <p class="text-gray-500">No places found</p>
+      </div>
+    }
+  }
+</div>

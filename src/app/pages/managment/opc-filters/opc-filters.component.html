@@ -1,0 +1,100 @@
+<div class="flex justify-between w-full gap-4 mb-4">
+  <div class="relative w-full">
+    <input #searchInput 
+      type="text" name="usuario" id="usuario" class="form-input" placeholder="Search place"
+      [value]="placeStore.searchTerm()"
+      (input)="searchPlace($event)" />
+      @if (placeStore.searchTerm().length >= 3) {
+        <button (click)="cleanSearch()">
+          <span 
+            class="material-icons absolute top-1/2 right-4 cursor-pointer text-red-600 transform -translate-y-1/2">
+            delete_outline
+          </span>
+        </button>
+      } @else {
+        <span class="material-icons absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500">
+          search
+        </span>
+      }
+  
+  </div>
+  <div class="flex gap-2">
+    <button (click)="togglePopover('tipo')" matTooltip="Filtro por tipo"
+      class=" bg-cyan-400 hover:bg-fuchsia-400 duration-300 rounded-md w-10 h-10 aspect-square center "
+      cdkOverlayOrigin #trigger1="cdkOverlayOrigin">
+      <span class="material-icons text-white"> tune </span>
+    </button>
+    <button (click)="placeStore.selectedPlace.set(null)" matTooltip="Filtro por tipo"
+      class=" bg-cyan-400 hover:bg-fuchsia-400 duration-300 rounded-md w-10 h-10 aspect-square center "
+      cdkOverlayOrigin #trigger1="cdkOverlayOrigin">
+      <span class="material-icons">
+        add
+      </span>
+    </button>
+  </div>
+</div>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger1"
+  [cdkConnectedOverlayOpen]="isPopoverTypeOpen()"
+  [cdkConnectedOverlayHasBackdrop]="true"
+  [cdkConnectedOverlayOffsetX]="0"
+  [cdkConnectedOverlayOffsetY]="0"
+  [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop'"
+  [cdkConnectedOverlayPanelClass]="'example-dialog-panel'"
+  (backdropClick)="isPopoverTypeOpen.set(false)"
+>
+  @if (isPopoverTypeOpen()) {
+    <div class="w-full z-20 bg-white shadow-lg p-4 rounded border border-gray-200 mt-2">
+      <h2 class="text-primary text-base font-semibold">Filter by category</h2>
+      <div class=" flex gap-3 mt-4">
+        <button 
+          (click)="placeStore.setFilter('1', 'Naturaleza y aventura')"
+          [class.active]="placeStore.filter() === '1'"
+          matTooltip="Naturaleza y aventura"
+          class="card-item active:scale-95 text-white bg-cyan-400 dark:text-white hover:text-white menu-item px-2 py-1 rounded-md border border-gray-200 transition-all duration-300 ease-in-out hover:bg-fuchsia-400 hover:shadow-md hover:-translate-y-2">
+          <span class="material-icons">
+            local_florist
+          </span>
+        </button>
+        <button 
+          (click)="placeStore.setFilter('2', 'Historia y cultura')"
+          [class.active]="placeStore.filter() === '2'"
+          matTooltip="Historia y cultura"
+          class="card-item active:scale-95 text-white bg-cyan-400 dark:text-white hover:text-white menu-item px-2 py-1 rounded-md border border-gray-200 transition-all duration-300 ease-in-out hover:bg-fuchsia-400 hover:shadow-md hover:-translate-y-2">
+          <span class="material-icons">
+            museum
+            </span>
+        </button>
+        <button 
+          (click)="placeStore.setFilter('3', 'Entretenimiento')"
+          [class.active]="placeStore.filter() === '3'"
+          matTooltip="Entretenimiento"
+          class="card-item active:scale-95 text-white bg-cyan-400 dark:text-white hover:text-white menu-item px-2 py-1 rounded-md border border-gray-200 transition-all duration-300 ease-in-out hover:bg-fuchsia-400 hover:shadow-md hover:-translate-y-2">
+          <span class="material-icons">
+            celebration
+          </span>
+        </button>
+        <button 
+          (click)="placeStore.setFilter('4', 'Gastronomía y experiencias')"
+          matTooltip="Gastronomía y experiencias" 
+          [class.active]="placeStore.filter() === '4'"
+          class="card-item active:scale-95 text-white bg-cyan-400 dark:text-white hover:text-white menu-item px-2 py-1 rounded-md border border-gray-200 transition-all duration-300 ease-in-out hover:bg-fuchsia-400 hover:shadow-md hover:-translate-y-2">
+          <span class="material-icons">
+            restaurant_menu
+          </span>
+        </button>
+        <button 
+          (click)="placeStore.setFilter('todos', 'todos')"
+          [class.active]="placeStore.filter() === 'todos'"
+          matTooltip="All"
+          class="card-item active:scale-95 text-white bg-cyan-400 dark:text-white hover:text-white menu-item px-2 py-1 rounded-md border border-gray-200 transition-all duration-300 ease-in-out hover:bg-fuchsia-400 hover:shadow-md hover:-translate-y-2">
+          <span class="material-icons">
+            apps
+          </span>
+        </button>
+      </div>
+    </div>
+  }
+</ng-template>

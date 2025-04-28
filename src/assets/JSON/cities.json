@@ -1,0 +1,102 @@
+[
+  {
+    "id_city": 1,
+    "name_city": "Yopal",
+    "depto": "Casanare"
+  },
+  {
+    "id_city": 2,
+    "name_city": "Bogotá",
+    "depto": "Cundinamarca"
+  },
+  {
+    "id_city": 3,
+    "name_city": "Medellín",
+    "depto": "Antioquia"
+  },
+  {
+    "id_city": 4,
+    "name_city": "Cali",
+    "depto": "Valle del Cauca"
+  },
+  {
+    "id_city": 5,
+    "name_city": "Barranquilla",
+    "depto": "Atlántico"
+  },
+  {
+    "id_city": 6,
+    "name_city": "Cartagena",
+    "depto": "Bolívar"
+  },
+  {
+    "id_city": 7,
+    "name_city": "Bucaramanga",
+    "depto": "Santander"
+  },
+  {
+    "id_city": 8,
+    "name_city": "Pereira",
+    "depto": "Risaralda"
+  },
+  {
+    "id_city": 9,
+    "name_city": "Manizales",
+    "depto": "Caldas"
+  },
+  {
+    "id_city": 10,
+    "name_city": "Cúcuta",
+    "depto": "Norte de Santander"
+  },
+  {
+    "id_city": 11,
+    "name_city": "Santa Marta",
+    "depto": "Magdalena"
+  },
+  {
+    "id_city": 12,
+    "name_city": "Ibagué",
+    "depto": "Tolima"
+  },
+  {
+    "id_city": 13,
+    "name_city": "Villavicencio",
+    "depto": "Meta"
+  },
+  {
+    "id_city": 14,
+    "name_city": "Neiva",
+    "depto": "Huila"
+  },
+  {
+    "id_city": 15,
+    "name_city": "Pasto",
+    "depto": "Nariño"
+  },
+  {
+    "id_city": 16,
+    "name_city": "Montería",
+    "depto": "Córdoba"
+  },
+  {
+    "id_city": 17,
+    "name_city": "Sincelejo",
+    "depto": "Sucre"
+  },
+  {
+    "id_city": 18,
+    "name_city": "Popayán",
+    "depto": "Cauca"
+  },
+  {
+    "id_city": 19,
+    "name_city": "Quibdó",
+    "depto": "Chocó"
+  },
+  {
+    "id_city": 20,
+    "name_city": "Armenia",
+    "depto": "Quindío"
+  }
+]

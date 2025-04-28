@@ -1,0 +1,109 @@
+
+<section class="w-full">
+  <form [formGroup]="form">
+    <div class="grid grid-cols-12 gap-4 w-full">
+      <div class="col-span-12 text-start">
+        <div class="w-full flex justify-between">
+          <button class="bg-fuchsia-400 center gap-2 px-6 py-2 mb-4 rounded-md cursor-pointer hover:bg-cyan-400 duration-300"
+            (click)="fileInput.click()">
+            <span class="material-icons">
+              add_photo_alternate
+            </span>
+            <p class="hidden md:block lg:block">Select image</p> 
+          </button>
+          @if (selectedFile) {
+            <button (click)="deleteImage()"class="bg-red-500 center gap-2 px-6 py-2 mb-4 rounded-md cursor-pointer hover:bg-red-400 duration-300">
+              <span class="material-icons "> delete </span>
+              <p class="hidden md:block lg:block">Delete image</p> 
+            </button>
+          }
+        </div>
+        <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" hidden />
+        @if(isloading()) {
+          <div role="status" class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
+            <div class="flex items-center justify-center w-full h-56 bg-gray-300 rounded-md ">
+              <svg class="w-full h-56 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                    <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"/>
+                </svg>
+            </div>
+          </div>
+        } @else {
+          <img alt="Image preview" [src]="imagePreview || defaultImage" class="w-full h-56 rounded-md object-cover" />
+        }
+        
+      </div>
+      
+    </div>
+    
+    <div class="grid grid-cols-12 gap-4 w-full mt-4">
+      <div class="form-group relative z-0 w-full mb-4 group col-span-12 md:col-span-6 lg:col-span-6 h-16">
+        <label for="name_place">Place name<span class="text-red-500">*</span></label>
+        <input 
+          type="text" 
+          formControlName="name_place" class="form-input pe-10" 
+          class="form-input"
+          placeholder="Place name"
+          required
+          maxlength="160"
+        />
+      </div>
+      <div class="form-group relative z-0 w-full mb-1 group col-span-12 md:col-span-6 lg:col-span-6 h-16">
+        <label for="description_place">Description name<span class="text-red-500">*</span></label>
+        <input 
+          type="text" 
+          formControlName="description_place" class="form-input pe-10" 
+          class="form-input"
+          placeholder="Description name"
+          required
+          maxlength="160"
+        />
+        
+      </div>
+      <div class="form-group relative z-0 w-full mb-1 group col-span-12 md:col-span-6 lg:col-span-6 h-16">
+        <label for="id_category">Category type<span class="text-red-500">*</span></label>
+        <select  
+          formControlName="id_category" 
+          name="id_category" 
+          id="id_category"
+          class="form-select "
+        >     
+        <option value="" disabled selected>Select category...</option> 
+          @for (item of placeStore.categories(); track item) {
+            <option [value]="item.id_category" class="py-2 px-4 text-black" >
+              {{ item.name_category }}
+            </option>
+          }
+        </select>
+      </div>
+      <div class="form-group relative z-0 w-full mb-1 group col-span-12 md:col-span-6 lg:col-span-6 h-16">
+        <label for="id_city">City<span class="text-red-500">*</span></label>
+        <select  
+          formControlName="id_city" 
+          name="id_city" 
+          id="id_city"
+          class="form-select"
+        >     
+          <option value="" disabled selected>Select city...</option> 
+          @for (item of placeStore.cities(); track item) {
+            <option [value]="item.id_city" class="py-2 px-4 text-black">
+              {{ item.name_city }}
+            </option>
+          }
+        </select>
+
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <button 
+        (click)="saveOrUpdatePlace()"
+        [disabled]="!form.valid"
+        [ngClass]="{'hover:bg-green-600': form.valid}"
+        class="center gap-2 bg-green-500 py-2 px-6 rounded-md mt-4 disabled:opacity-60 disabled:cursor-not-allowed duration-300">
+        <span class="material-icons">
+          backup
+        </span>
+        {{form.get('id_place')?.value ? 'Update' : 'Save'}}
+      </button>
+    </div>
+  </form>
+</section>

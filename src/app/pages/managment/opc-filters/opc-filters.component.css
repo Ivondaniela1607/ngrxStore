@@ -1,0 +1,6 @@
+.card-item {
+  @apply flex items-center justify-center w-10 h-10;
+}
+.card-item.active {
+  @apply -translate-y-2 shadow-md bg-fuchsia-400 text-white !important;
+}

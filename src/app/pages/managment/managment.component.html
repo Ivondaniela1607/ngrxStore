@@ -1,0 +1,24 @@
+<section class="relative h-auto md:h-screen lg:h-screen overflow-hidden flex items-center justify-center">
+  <app-view-state></app-view-state>
+  <div
+    class="absolute top-0 left-0 w-full h-full bg-cover bg-center brightness-50 transition-all duration-500 hover:brightness-90"
+    style="background-image: url('assets/hero/hero.png');">
+  </div>
+
+  <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900/60 to-cyan-900/60 mix-blend-overlay z-0"></div>
+  <div
+    class="relative h-auto md:h-[90vh] lg:h-[90vh] w-10/12 space-y-6 p-2 md:p-10 lg:p-10  rounded-2xl bg-gray-900/20 backdrop-blur-lg mx-auto flex flex-col items-center justify-center text-white text-center z-10 shadow-xl transition-all duration-300  hover:shadow-2xl animate-pulse-slow">
+    <h1 class="text-4xl font-bold bg-gradient-to-r from-fuchsia-400 via-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+      ¡Welcome to Places!
+    </h1>
+
+    <div class="w-full h-full grid grid-cols-12 gap-4">
+      <div class="col-span-12 md:col-span-5 lg:col-span-5 flex flex-col items-center  rounded-md p-2 transition-colors duration-300 ">
+        <app-list-places class="w-full"/>
+      </div>
+      <div class="col-span-12 md:col-span-7 lg:col-span-7 rounded-md overflow-auto p-2 transition-colors duration-300 scrollbar-thin scrollbar-thumb-fuchsia-500 scrollbar-track-gray-700">
+        <app-form-places />
+      </div>
+    </div>
+  </div>
+</section>
