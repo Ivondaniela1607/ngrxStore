@@ -1,59 +1,27 @@
-# ManagmentApiPlaces
+🛠️ Tecnologías utilizadas
+Angular 17+
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+NgRx Signals (Store y Computed States)
 
-## Development server
+Tailwind CSS (estilos y diseño responsivo)
 
-To start a local development server, run:
+TypeScript
 
-```bash
-ng serve
-```
+JSON Server (simulado)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+✨ Funcionalidades principales
+📋 Formulario para crear nuevos lugares.
 
-## Code scaffolding
+🖼️ Adjuntar imágenes locales (previsualización inmediata).
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🔎 Filtros dinámicos por categorías usando NgRx Signals.
 
-```bash
-ng generate component component-name
-```
+🔥 Búsqueda reactiva por nombre o descripción.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+⚡ Simulación de consumo de API a partir de archivos JSON locales.
 
-```bash
-ng generate --help
-```
+⏳ Skeleton loaders mientras se cargan los datos (mejor experiencia de usuario).
 
-## Building
+📱 Diseño responsive para móviles, tablets y desktop.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🚀 Optimizado con estado reactivo: Cada cambio en el estado se refleja inmediatamente en la UI.
